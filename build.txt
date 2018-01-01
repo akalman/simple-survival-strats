@@ -1,0 +1,3 @@
+author = akalman
+version = 0.1
+displayName = Simple Survival Strats
