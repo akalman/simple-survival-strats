@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats
 {
-    public class EffectiveHealthDefensePlayer : ModPlayer
+    public class EffectiveHealthDefensePlayerMod : ModPlayer
     {
         public override bool PreHurt(
             bool pvp,

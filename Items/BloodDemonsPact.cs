@@ -1,13 +1,14 @@
+using SimpleSurvivalStrats.Buffs;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats.Items
 {
-    public class HalfDamageItem : ModItem
+    public class BloodDemonsPact : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Half Damage");
+            DisplayName.SetDefault("Blood Demon's Pact");
         }
 
         public override void SetDefaults()
@@ -17,7 +18,7 @@ namespace SimpleSurvivalStrats.Items
             item.value = 10000;
             item.rare = 2;
             item.accessory = true;
-            item.defense = 20;
+            item.buffType = mod.BuffType<LifestealBuff>();
         }
 
         public override void AddRecipes()
