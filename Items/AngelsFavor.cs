@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats.Items
 {
-    public class BloodDemonsPact : ModItem
+    public class AngelsFavor : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Blood Demon's Pact");
+            DisplayName.SetDefault("Angel's Favor");
         }
 
         public override void SetDefaults()
@@ -32,7 +32,10 @@ namespace SimpleSurvivalStrats.Items
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.AddBuff(mod.BuffType<LifestealBuff>(), 1);
+            if (!player.HasBuff(mod.BuffType<DamageBlockCooldownBuff>()))
+            {
+                player.AddBuff(mod.BuffType<DamageBlockBuff>(), 1);
+            }
         }
     }
 }

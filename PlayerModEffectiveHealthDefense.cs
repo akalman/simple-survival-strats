@@ -26,7 +26,7 @@ namespace SimpleSurvivalStrats
             var damageMultiplier = 1 - (numerator / denominator);
             var floatDamage = floatRawDamage * damageMultiplier;
 
-            damage = Convert.ToInt32(floatDamage);
+            damage = Math.Max(Convert.ToInt32(floatDamage), 1);
 
             return true;
         }

@@ -13,12 +13,5 @@ namespace SimpleSurvivalStrats
                 AutoloadSounds = true
             };
         }
-
-//        public override void Load()
-//        {
-//            base.Load();
-//
-//            AddPlayer("EffectiveHealthDefensePlayer", new EffectiveHealthDefensePlayer());
-//        }
     }
 }
