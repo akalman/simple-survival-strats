@@ -7,8 +7,8 @@ namespace SimpleSurvivalStrats.Buffs
     {
         public override void SetDefaults()
         {
-            DisplayName.SetDefault("Rebirth");
-            Description.SetDefault("Your soul feels overflowing with energy");
+            DisplayName.SetDefault("Unfamiliar Presence");
+            Description.SetDefault("Strangely foreign whispers echo in your mind");
 
             Main.buffNoTimeDisplay[Type] = true;
             Main.persistentBuff[Type] = true;

@@ -7,10 +7,11 @@ namespace SimpleSurvivalStrats.Buffs
     {
         public override void SetDefaults()
         {
-            DisplayName.SetDefault("Damage Block");
-            Description.SetDefault("The next instance of damage will be blocked");
+            DisplayName.SetDefault("Angel's Favor");
+            Description.SetDefault("A subtle warmth clings to you");
 
             Main.buffNoTimeDisplay[Type] = true;
+            Main.persistentBuff[Type] = true;
             canBeCleared = false;
         }
     }

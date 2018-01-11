@@ -7,10 +7,11 @@ namespace SimpleSurvivalStrats.Buffs
     {
         public override void SetDefaults()
         {
-            DisplayName.SetDefault("Lifesteal");
-            Description.SetDefault("Dealing damage heals you");
+            DisplayName.SetDefault("Demonic Tribute");
+            Description.SetDefault("Blood you've spilt boils and energizes you");
 
             Main.buffNoTimeDisplay[Type] = true;
+            Main.persistentBuff[Type] = true;
             canBeCleared = false;
         }
     }

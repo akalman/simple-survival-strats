@@ -1,15 +1,14 @@
 using SimpleSurvivalStrats.Buffs;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats.Items
 {
-    public class AngelsFavor : ModItem
+    public class LesserAngelsPact : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Angel's Favor");
+            DisplayName.SetDefault("Lesser Angel's Pact");
         }
 
         public override void SetDefaults()
@@ -23,11 +22,12 @@ namespace SimpleSurvivalStrats.Items
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.DirtBlock, 1);
-            recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+//            if (Debug.On)
+            if (true)
+            {
+                var recipe = Debug.MakeDebugRecipe(mod, this);
+                recipe.AddRecipe();
+            }
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

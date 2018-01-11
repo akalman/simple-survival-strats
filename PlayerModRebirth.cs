@@ -16,7 +16,7 @@ namespace SimpleSurvivalStrats
             {
                 _isRebirthing = true;
 
-                player.respawnTimer = 1 * Timing.Seconds;
+                player.respawnTimer = (Debug.On ? 1 : 5) * Timing.Seconds;
                 player.AddBuff(mod.BuffType<RebirthCooldownBuff>(), 5 * Timing.Minutes, false);
                 player.DelBuff(player.FindBuffIndex(mod.BuffType<RebirthBuff>()));
             }

@@ -7,13 +7,19 @@ namespace SimpleSurvivalStrats.Buffs
     {
         public override void SetDefaults()
         {
-            DisplayName.SetDefault("Rebirth Cooldown");
-            Description.SetDefault("Your soul burns like its never touched air before");
+            DisplayName.SetDefault("Unfamiliar Presence Cooldown");
+            Description.SetDefault("Your thoughts linger unanswered");
 
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = true;
             Main.persistentBuff[Type] = true;
             canBeCleared = false;
+
+            if (Debug.On)
+            {
+                Main.debuff[Type] = false;
+                canBeCleared = true;
+            }
         }
     }
 }

@@ -7,12 +7,19 @@ namespace SimpleSurvivalStrats.Buffs
     {
         public override void SetDefaults()
         {
-            DisplayName.SetDefault("Damage Block Cooldown");
-            Description.SetDefault("Damage has been recently blocked");
+            DisplayName.SetDefault("Angel's Favor Cooldown");
+            Description.SetDefault("The cold is crisp and biting");
 
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = true;
+            Main.persistentBuff[Type] = true;
             canBeCleared = false;
+
+            if (Debug.On)
+            {
+                Main.debuff[Type] = false;
+                canBeCleared = true;
+            }
         }
     }
 }
