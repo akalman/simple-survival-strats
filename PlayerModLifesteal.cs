@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats
 {
-    public class LifestealPlayerMod : ModPlayer
+    public class PlayerModLifesteal : ModPlayer
     {
         private const decimal Lifesteal = .15m;
 
