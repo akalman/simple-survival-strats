@@ -1,4 +1,5 @@
 using SimpleSurvivalStrats.Buffs;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -28,6 +29,11 @@ namespace SimpleSurvivalStrats.Items
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);
             recipe.AddRecipe();
+        }
+
+        public override void UpdateAccessory(Player player, bool hideVisual)
+        {
+            player.AddBuff(mod.BuffType<LifestealBuff>(), 1);
         }
     }
 }
