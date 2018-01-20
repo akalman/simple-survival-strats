@@ -9,7 +9,7 @@ namespace SimpleSurvivalStrats
     {
         public override void PreUpdate()
         {
-            if (Main.npc.Any(npc => npc.boss))
+            if (Main.npc.Any(npc => npc.boss && npc.HasValidTarget))
             {
                 if (player.dead)
                 {
