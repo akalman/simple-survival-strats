@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats.Items
 {
-    public class SoulImplant : ModItem
+    public class PestilenceDemonsPact : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Soul Implant");
+            DisplayName.SetDefault("Pestilence Demon's Pact");
         }
 
         public override void SetDefaults()
@@ -33,10 +33,10 @@ namespace SimpleSurvivalStrats.Items
             }
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.GuideVoodooDoll, 1);
-            recipe.AddIngredient(ItemID.ClothierVoodooDoll, 1);
-            recipe.AddIngredient(ItemID.Actuator, 1);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddIngredient(ItemID.BandofRegeneration, 1);
+            recipe.AddIngredient(ItemID.LifeforcePotion, 2);
+            recipe.AddIngredient(mod.ItemType<BloodDemonsPact>(), 1);
+            recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);
             recipe.AddRecipe();
             recipe = null;
@@ -44,10 +44,8 @@ namespace SimpleSurvivalStrats.Items
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            if (!player.HasBuff(mod.BuffType<RebirthCooldownBuff>()))
-            {
-                player.AddBuff(mod.BuffType<RebirthBuff>(), 1);
-            }
+            player.AddBuff(mod.BuffType<LifestealBuff>(), 1);
+            player.statLifeMax2 += 200;
         }
     }
 }

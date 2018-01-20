@@ -33,17 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="EffectiveHealthDefensePlayer.cs" />
-    <None Include=".gitignore" />
-    <Compile Include="Items\OneThirdDamageItem.cs" />
-    <Compile Include="Items\QuarterDamageItem.cs" />
-    <Compile Include="Items\HalfDamageItem.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Debug.cs" />
+    <Compile Include="Items\BloodDemonsPact.cs" />
+    <Compile Include="Items\LesserAngelsPact.cs" />
+    <Compile Include="Items\PestilenceDemonsPact.cs" />
+    <Compile Include="Items\SoulImplant.cs" />
+    <Compile Include="PlayerModDamageBlock.cs" />
+    <Compile Include="PlayerModDelayedRegen.cs" />
+    <Compile Include="PlayerModEffectiveHealthDefense.cs" />
+    <Compile Include="PlayerModLifesteal.cs" />
+    <Compile Include="PlayerModRebirth.cs" />
     <Compile Include="SimpleSurvivalStrats.cs" />
-    <None Include="build.sh" />
-    <None Include="README.md" />
+    <Compile Include="Timing.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
@@ -70,9 +71,15 @@
   <ItemGroup>
     <Content Include="build.txt" />
     <Content Include="description.txt" />
-    <Content Include="Items\OneThirdDamageItem.png" />
-    <Content Include="Items\QuarterDamageItem.png" />
-    <Content Include="Items\HalfDamageItem.png" />
+    <Content Include="Items\BloodDemonsPact.png" />
+    <Content Include="Items\LesserAngelsPact.png" />
+    <Content Include="Items\PestilenceDemonsPact.png" />
+    <Content Include="Items\SoulImplant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="build.sh" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

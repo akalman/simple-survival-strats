@@ -5,7 +5,7 @@ namespace SimpleSurvivalStrats
 {
     public static class Debug
     {
-        public const bool On = false;
+        public const bool On = true;
 
         public static ModRecipe MakeDebugRecipe(Mod mod, ModItem result)
         {

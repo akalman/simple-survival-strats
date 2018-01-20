@@ -1,5 +1,6 @@
 using SimpleSurvivalStrats.Buffs;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats.Items
@@ -22,12 +23,24 @@ namespace SimpleSurvivalStrats.Items
 
         public override void AddRecipes()
         {
-//            if (Debug.On)
-            if (true)
+            ModRecipe recipe = null;
+            if (Debug.On)
+//            if (true)
             {
-                var recipe = Debug.MakeDebugRecipe(mod, this);
+                recipe = Debug.MakeDebugRecipe(mod, this);
                 recipe.AddRecipe();
+                recipe = null;
             }
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.Shackle, 1);
+            recipe.AddIngredient(ItemID.FallenStar, 5);
+            recipe.AddIngredient(ItemID.Bunny, 1);
+            recipe.AddIngredient(ItemID.ThrowingKnife, 1);
+            recipe.AddTile(TileID.DemonAltar);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+            recipe = null;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
