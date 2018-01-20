@@ -9,14 +9,15 @@ namespace SimpleSurvivalStrats
 {
     public class PlayerModRebirth : ModPlayer
     {
-        private bool _isRebirthing = false;
+        public bool IsRebirthing = false;
+
         private bool _readyToTeleport = false;
 
         public override void Kill(double damage, int hitDirection, bool pvp, PlayerDeathReason damageSource)
         {
             if (player.HasBuff(mod.BuffType<RebirthBuff>()))
             {
-                _isRebirthing = true;
+                IsRebirthing = true;
 
                 player.respawnTimer = (Debug.On ? 1 : 5) * Timing.Seconds;
                 player.AddBuff(mod.BuffType<RebirthCooldownBuff>(), 5 * Timing.Minutes, false);
@@ -35,9 +36,9 @@ namespace SimpleSurvivalStrats
 
         public override void OnRespawn(Player player)
         {
-            if (_isRebirthing)
+            if (IsRebirthing)
             {
-                _isRebirthing = false;
+                IsRebirthing = false;
                 _readyToTeleport = true;
             }
         }
