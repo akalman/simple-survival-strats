@@ -1,8 +1,6 @@
 ﻿using System.Linq;
-using SimpleSurvivalStrats.Buffs;
 using SimpleSurvivalStrats.Items;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats
@@ -23,15 +21,15 @@ namespace SimpleSurvivalStrats
 
         public override void PreUpdate()
         {
-            if (_ticksSinceLastDamageOrAttack > 20 * Timing.Seconds)
+            if (_ticksSinceLastDamageOrAttack > 10 * Timing.Seconds)
             {
-                player.lifeRegen += 10;
+                Util.HealSilent(player, 2);
             }
         }
 
         public override void PostUpdate()
         {
-            if (player.miscEquips.Any(equip => equip.type == mod.ItemType<PestilenceDemonsPact>()))
+            if (player.armor.Any(equip => equip.type == mod.ItemType<PestilenceDemonsPact>()))
             {
                 _ticksSinceLastDamageOrAttack++;
             }
@@ -42,3 +40,4 @@ namespace SimpleSurvivalStrats
         }
     }
 }
+ 

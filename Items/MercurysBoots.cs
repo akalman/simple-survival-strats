@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats.Items
 {
-    public class LesserAngelsPact : ModItem
+    public class MercurysBoots : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Lesser Angel's Pact");
+            DisplayName.SetDefault("Mercury's Boots");
         }
 
         public override void SetDefaults()
@@ -32,11 +32,10 @@ namespace SimpleSurvivalStrats.Items
             }
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Shackle, 1);
-            recipe.AddIngredient(ItemID.FallenStar, 5);
-            recipe.AddIngredient(ItemID.Bunny, 1);
-            recipe.AddIngredient(ItemID.ThrowingKnife, 1);
-            recipe.AddTile(TileID.DemonAltar);
+            recipe.AddIngredient(ItemID.FrostsparkBoots, 1);
+            recipe.AddIngredient(ItemID.EoCShield, 1);
+            recipe.AddIngredient(mod.ItemType<LesserAngelsPact>(), 1);
+            recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(this);
             recipe.AddRecipe();
             recipe = null;
@@ -44,6 +43,12 @@ namespace SimpleSurvivalStrats.Items
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            player.accRunSpeed = 6.75f;
+            player.rocketBoots = 3;
+            player.moveSpeed = player.moveSpeed + 0.08f;
+            player.iceSkate = true;
+            player.dash = 2;
+
             if (!player.HasBuff(mod.BuffType<DamageBlockCooldownBuff>()))
             {
                 player.AddBuff(mod.BuffType<DamageBlockBuff>(), 1);

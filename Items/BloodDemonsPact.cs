@@ -25,7 +25,6 @@ namespace SimpleSurvivalStrats.Items
         {
             ModRecipe recipe = null;
             if (Debug.On)
-//            if (true)
             {
                 recipe = Debug.MakeDebugRecipe(mod, this);
                 recipe.AddRecipe();

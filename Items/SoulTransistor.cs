@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats.Items
 {
-    public class LesserAngelsPact : ModItem
+    public class SoulTransistor : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Lesser Angel's Pact");
+            DisplayName.SetDefault("Soul Transistor");
         }
 
         public override void SetDefaults()
@@ -32,11 +32,11 @@ namespace SimpleSurvivalStrats.Items
             }
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Shackle, 1);
-            recipe.AddIngredient(ItemID.FallenStar, 5);
-            recipe.AddIngredient(ItemID.Bunny, 1);
-            recipe.AddIngredient(ItemID.ThrowingKnife, 1);
-            recipe.AddTile(TileID.DemonAltar);
+            recipe.AddIngredient(ItemID.SoulofMight, 5);
+            recipe.AddIngredient(ItemID.SoulofSight, 5);
+            recipe.AddIngredient(ItemID.SoulofFright, 5);
+            recipe.AddIngredient(mod.ItemType<SoulImplant>(), 1);
+            recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(this);
             recipe.AddRecipe();
             recipe = null;
@@ -44,9 +44,9 @@ namespace SimpleSurvivalStrats.Items
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            if (!player.HasBuff(mod.BuffType<DamageBlockCooldownBuff>()))
+            if (!player.HasBuff(mod.BuffType<RebirthCooldownBuff>()))
             {
-                player.AddBuff(mod.BuffType<DamageBlockBuff>(), 1);
+                player.AddBuff(mod.BuffType<RebirthBuff>(), 1);
             }
         }
     }

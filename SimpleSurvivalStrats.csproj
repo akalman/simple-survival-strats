@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Buffs\DamageBlockBuff.cs" />
+    <Compile Include="Buffs\DamageBlockCooldownBuff.cs" />
+    <Compile Include="Buffs\LifestealBuff.cs" />
+    <Compile Include="Buffs\RebirthBuff.cs" />
+    <Compile Include="Buffs\RebirthCooldownBuff.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Items\BloodDemonsPact.cs" />
     <Compile Include="Items\LesserAngelsPact.cs" />

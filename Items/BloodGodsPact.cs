@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 
 namespace SimpleSurvivalStrats.Items
 {
-    public class LesserAngelsPact : ModItem
+    public class BloodGodsPact : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Lesser Angel's Pact");
+            DisplayName.SetDefault("Blood God's Pact");
         }
 
         public override void SetDefaults()
@@ -32,10 +32,9 @@ namespace SimpleSurvivalStrats.Items
             }
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Shackle, 1);
-            recipe.AddIngredient(ItemID.FallenStar, 5);
-            recipe.AddIngredient(ItemID.Bunny, 1);
-            recipe.AddIngredient(ItemID.ThrowingKnife, 1);
+            recipe.AddIngredient(ItemID.AvengerEmblem, 1);
+            recipe.AddIngredient(ItemID.MoonStone, 1);
+            recipe.AddIngredient(mod.ItemType<BloodDemonsPact>(), 1);
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);
             recipe.AddRecipe();
@@ -44,10 +43,11 @@ namespace SimpleSurvivalStrats.Items
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            if (!player.HasBuff(mod.BuffType<DamageBlockCooldownBuff>()))
-            {
-                player.AddBuff(mod.BuffType<DamageBlockBuff>(), 1);
-            }
+            player.AddBuff(mod.BuffType<LifestealBuff>(), 1);
+            player.magicCrit += 10;
+            player.meleeCrit += 10;
+            player.rangedCrit += 10;
+            player.thrownCrit += 10;
         }
     }
 }
