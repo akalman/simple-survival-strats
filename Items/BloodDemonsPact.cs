@@ -10,6 +10,9 @@ namespace SimpleSurvivalStrats.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blood Demon's Pact");
+            Tooltip.SetDefault(@"
+Damaging enemies heals you.
+            ");
         }
 
         public override void SetDefaults()

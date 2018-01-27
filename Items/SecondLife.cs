@@ -10,6 +10,12 @@ namespace SimpleSurvivalStrats.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Second Life");
+            Tooltip.SetDefault(@"
+Infrequently prevents death.
+Grants full health on respawn.
+Moderately increases health.
+Grants immunity to knockback.
+            ");
         }
 
         public override void SetDefaults()

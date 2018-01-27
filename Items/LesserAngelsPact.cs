@@ -10,6 +10,9 @@ namespace SimpleSurvivalStrats.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Lesser Angel's Pact");
+            Tooltip.SetDefault(@"
+Periodically blocks an attack.
+            ");
         }
 
         public override void SetDefaults()

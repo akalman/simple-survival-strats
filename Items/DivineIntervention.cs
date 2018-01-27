@@ -10,6 +10,11 @@ namespace SimpleSurvivalStrats.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Divine Intervention");
+            Tooltip.SetDefault(@"
+Periodically blocks an attack.
+Increases length of invincibility after taking damage.
+Causes stars to fall when injured.
+            ");
         }
 
         public override void SetDefaults()

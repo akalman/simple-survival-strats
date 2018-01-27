@@ -10,6 +10,10 @@ namespace SimpleSurvivalStrats.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blood God's Pact");
+            Tooltip.SetDefault(@"
+Damaging enemies heals you.
+The effect is doubled briefly after a critical hit.
+            ");
         }
 
         public override void SetDefaults()

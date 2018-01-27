@@ -10,6 +10,10 @@ namespace SimpleSurvivalStrats.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Soul Transistor");
+            Tooltip.SetDefault(@"
+Infrequently prevents death.
+Cooldown is reduced by dealing damage.
+            ");
         }
 
         public override void SetDefaults()

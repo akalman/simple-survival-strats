@@ -10,6 +10,9 @@ namespace SimpleSurvivalStrats.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Soul Implant");
+            Tooltip.SetDefault(@"
+Infrequently prevents death.
+            ");
         }
 
         public override void SetDefaults()

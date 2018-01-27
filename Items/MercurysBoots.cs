@@ -10,6 +10,11 @@ namespace SimpleSurvivalStrats.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Mercury's Boots");
+            Tooltip.SetDefault(@"
+Periodically blocks an attack.
+Allows the player to dash into the enemy.
+Allows flight, super fast running, and extra mobility on ice.
+            ");
         }
 
         public override void SetDefaults()

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Microsoft.Xna.Framework;
 using SimpleSurvivalStrats.Buffs;
 using SimpleSurvivalStrats.Items;
 using Terraria;
@@ -47,7 +48,7 @@ namespace SimpleSurvivalStrats
         {
             if (_readyToTeleport)
             {
-                player.Teleport(player.lastDeathPostion);
+                player.Teleport(player.lastDeathPostion - Vector2.UnitY * 20);
                 _readyToTeleport = false;
             }
         }

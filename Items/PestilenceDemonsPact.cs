@@ -10,6 +10,11 @@ namespace SimpleSurvivalStrats.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Pestilence Demon's Pact");
+            Tooltip.SetDefault(@"
+Damaging enemies heals you.
+Significantly increases max health.
+Gives extremely fast health regen out of combat.
+            ");
         }
 
         public override void SetDefaults()

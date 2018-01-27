@@ -40,9 +40,17 @@
     <Compile Include="Buffs\RebirthCooldownBuff.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Items\BloodDemonsPact.cs" />
+    <Compile Include="Items\MercurysBoots.cs" />
+    <Compile Include="Items\DivineIntervention.cs" />
     <Compile Include="Items\LesserAngelsPact.cs" />
+    <Compile Include="Items\BloodGodsPact.cs" />
     <Compile Include="Items\PestilenceDemonsPact.cs" />
+    <Compile Include="Items\SecondLife.cs" />
+    <Compile Include="Items\SoulTransistor.cs" />
     <Compile Include="Items\SoulImplant.cs" />
+    <Compile Include="PlayerModNoRespawnDuringBoss.cs" />
+    <Compile Include="PlayerModFullHealthRespawn.cs" />
+    <Compile Include="Util.cs" />
     <Compile Include="PlayerModDamageBlock.cs" />
     <Compile Include="PlayerModDelayedRegen.cs" />
     <Compile Include="PlayerModEffectiveHealthDefense.cs" />
@@ -74,11 +82,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Buffs\DamageBlockBuff.png" />
+    <Content Include="Buffs\DamageBlockCooldownBuff.png" />
+    <Content Include="Buffs\LifestealBuff.png" />
+    <Content Include="Buffs\RebirthBuff.png" />
+    <Content Include="Buffs\RebirthCooldownBuff.png" />
     <Content Include="build.txt" />
     <Content Include="description.txt" />
+    <Content Include="Items\DivineIntervention.png" />
+    <Content Include="Items\BloodGodsPact.png" />
     <Content Include="Items\BloodDemonsPact.png" />
+    <Content Include="Items\MercurysBoots.png" />
     <Content Include="Items\LesserAngelsPact.png" />
     <Content Include="Items\PestilenceDemonsPact.png" />
+    <Content Include="Items\SecondLife.png" />
+    <Content Include="Items\SoulTransistor.png" />
     <Content Include="Items\SoulImplant.png" />
   </ItemGroup>
   <ItemGroup>
