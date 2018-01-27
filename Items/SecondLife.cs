@@ -54,7 +54,14 @@ Grants immunity to knockback.
 
             if (!player.HasBuff(mod.BuffType<RebirthCooldownBuff>()))
             {
-                player.AddBuff(mod.BuffType<RebirthBuff>(), 1);
+                if (!player.HasBuff(mod.BuffType<RebirthBuff>()))
+                {
+                    player.AddBuff(mod.BuffType<RebirthBuff>(), 2 * Timing.Frames);
+                }
+                else
+                {
+                    player.buffTime[player.FindBuffIndex(mod.BuffType<RebirthBuff>())] = 2 * Timing.Frames;
+                }
             }
         }
     }

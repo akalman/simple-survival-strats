@@ -48,8 +48,16 @@ Gives extremely fast health regen out of combat.
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.AddBuff(mod.BuffType<LifestealBuff>(), 1);
             player.statLifeMax2 += 200;
+
+            if (!player.HasBuff(mod.BuffType<LifestealBuff>()))
+            {
+                player.AddBuff(mod.BuffType<LifestealBuff>(), 2 * Timing.Frames);
+            }
+            else
+            {
+                player.buffTime[player.FindBuffIndex(mod.BuffType<LifestealBuff>())] = 2 * Timing.Frames;
+            }
         }
     }
 }

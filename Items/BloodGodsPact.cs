@@ -47,11 +47,19 @@ The effect is doubled briefly after a critical hit.
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.AddBuff(mod.BuffType<LifestealBuff>(), 1);
             player.magicCrit += 10;
             player.meleeCrit += 10;
             player.rangedCrit += 10;
             player.thrownCrit += 10;
+
+            if (!player.HasBuff(mod.BuffType<LifestealBuff>()))
+            {
+                player.AddBuff(mod.BuffType<LifestealBuff>(), 2 * Timing.Frames);
+            }
+            else
+            {
+                player.buffTime[player.FindBuffIndex(mod.BuffType<LifestealBuff>())] = 2 * Timing.Frames;
+            }
         }
     }
 }

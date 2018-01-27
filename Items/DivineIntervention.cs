@@ -53,7 +53,14 @@ Causes stars to fall when injured.
 
             if (!player.HasBuff(mod.BuffType<DamageBlockCooldownBuff>()))
             {
-                player.AddBuff(mod.BuffType<DamageBlockBuff>(), 1);
+                if (!player.HasBuff(mod.BuffType<DamageBlockBuff>()))
+                {
+                    player.AddBuff(mod.BuffType<DamageBlockBuff>(), 2 * Timing.Frames);
+                }
+                else
+                {
+                    player.buffTime[player.FindBuffIndex(mod.BuffType<DamageBlockBuff>())] = 2 * Timing.Frames;
+                }
             }
         }
     }
