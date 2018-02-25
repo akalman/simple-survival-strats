@@ -9,7 +9,7 @@ namespace SimpleSurvivalStrats
     {
         public override void PreUpdate()
         {
-            if (Main.npc.Any(npc => npc.boss && npc.HasValidTarget))
+            if (Main.npc.Any(npc => npc.boss))
             {
                 if (player.dead)
                 {
@@ -18,6 +18,17 @@ namespace SimpleSurvivalStrats
                         player.respawnTimer = Math.Max(player.respawnTimer, 2);
                     }
                 }
+            }
+        }
+    }
+
+    public class BossExists : GlobalNPC
+    {
+        public override void PostAI(NPC npc)
+        {
+            if (npc.boss && Main.player.All(player => player.dead))
+            {
+                npc.active = false;
             }
         }
     }

@@ -89,15 +89,15 @@
     <Content Include="Buffs\RebirthCooldownBuff.png" />
     <Content Include="build.txt" />
     <Content Include="description.txt" />
+    <Content Include="Items\LesserAngelsPact.png" />
+    <Content Include="Items\BloodDemonsPact.png" />
     <Content Include="Items\DivineIntervention.png" />
     <Content Include="Items\BloodGodsPact.png" />
-    <Content Include="Items\BloodDemonsPact.png" />
     <Content Include="Items\MercurysBoots.png" />
-    <Content Include="Items\LesserAngelsPact.png" />
     <Content Include="Items\PestilenceDemonsPact.png" />
     <Content Include="Items\SecondLife.png" />
-    <Content Include="Items\SoulTransistor.png" />
     <Content Include="Items\SoulImplant.png" />
+    <Content Include="Items\SoulTransistor.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
