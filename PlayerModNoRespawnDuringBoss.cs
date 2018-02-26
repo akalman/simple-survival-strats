@@ -33,7 +33,7 @@ namespace SimpleSurvivalStrats
             var playersAlive = Main.player
                 .Where(player => !player.dead || player.GetModPlayer<PlayerModRebirth>().IsRebirthing);
 
-            if (npc.boss && playersAlive.Any())
+            if (npc.boss && !playersAlive.Any())
             {
                 npc.active = false;
             }
