@@ -9,7 +9,7 @@ namespace SimpleSurvivalStrats
 {
     public class PlayerModLifesteal : ModPlayer
     {
-        private const decimal Lifesteal = .15m;
+        private const decimal Lifesteal = .05m;
         private const decimal DebugLifesteal = 1m;
 
         private bool _overcharged = false;
