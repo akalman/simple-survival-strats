@@ -9,7 +9,11 @@ namespace SimpleSurvivalStrats
     {
         public override void PreUpdate()
         {
-            if (Main.npc.Any(npc => npc.boss))
+            var activeBosses = Main.npc
+                .Where(npc => npc.active)
+                .Where(npc => npc.boss);
+
+            if (activeBosses.Any())
             {
                 if (player.dead)
                 {
@@ -26,7 +30,10 @@ namespace SimpleSurvivalStrats
     {
         public override void PostAI(NPC npc)
         {
-            if (npc.boss && Main.player.All(player => player.dead))
+            var playersAlive = Main.player
+                .Where(player => !player.dead || player.GetModPlayer<PlayerModRebirth>().IsRebirthing);
+
+            if (npc.boss && playersAlive.Any())
             {
                 npc.active = false;
             }
